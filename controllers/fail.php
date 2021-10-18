@@ -1,9 +1,11 @@
 <?php
-class Fail
+class Fail extends Controller
 {
     function __construct()
     {
-        echo "<h1>error al cargar pagina</h1>";
+        parent::__construct();  
+        $this->view->message = "Ah ocurrido un error fatal";
+        $this->view->render('fail/index'); 
     }
 }
 ?>

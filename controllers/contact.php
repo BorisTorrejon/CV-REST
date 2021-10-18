@@ -1,5 +1,5 @@
 <?php
-class Main extends Controller
+class Contact extends Controller
 {
     function __construct()
     {
@@ -7,7 +7,7 @@ class Main extends Controller
     }
     function render()
     {
-        $this->view->render('main/index');
+        $this->view->render('contact/index');
     }
 }
 ?>
