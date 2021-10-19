@@ -11,9 +11,14 @@ class App{
         {
             require_once $fileController;
             $controller = new $url[0];
-            if(isset($url[1]))
+            //$url[1] refers to the method of my class.
+            //if $url[1] is not empty and g exists in my class.
+            if((isset($url[1]))and(method_exists($controller,$url[1])))
             {
-                $controller->{$url[1]}();
+                if(isset($url[2]))
+                    $controller->{$url[1]}($url[2]);
+                else
+                    $controller->{$url[1]}("");
             }
             else
             {
