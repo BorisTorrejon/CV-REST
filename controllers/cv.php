@@ -1,6 +1,7 @@
 <?php
 class Cv
 {
+    const dirCvsData ="./models/cvs.json";
     function __construct()
     {
         
@@ -11,10 +12,19 @@ class Cv
     }
     function get($id)
     {
+        $cvsData = file_get_contents(Cv::dirCvsData);
         if ($id<>"")
-            echo "mensaje".$id;
+            {
+                $cvs = json_decode($cvsData,true);
+                foreach ($cvs as $cv){
+                    if ($cv['id']==$id)
+                      echo json_encode($cv);
+                }
+            }
         else
-            echo "mensajes";            
+        {
+            echo $cvsData;
+        }           
     }
     function post()
     {
@@ -22,6 +32,8 @@ class Cv
     }
     function put($id)
     {
+        $_PUT=json_decode(file_get_contents('php://input'),true);
+        
         if ($id<>"")
             echo "esto es un put id= ".$id;
     }

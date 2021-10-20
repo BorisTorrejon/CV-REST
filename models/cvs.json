@@ -1,0 +1,73 @@
+[
+    {
+        "id":"1",
+        "language":"es",
+        "name":"Boris",
+        "surname":"Torrejon",
+        "email":"torrejonboris@gmail.com",
+        "phone":"542236951583",
+        "address":{
+            "calle":"Cornelio Viera",
+            "nro":"213",
+            "city":"Mar del Plata",
+            "state":"Buenos Aires",
+            "country":"Argentina"
+        },
+        "letter":"hola, soy un programador jr",
+        "socialMedia":[
+            {
+                "name":"facebook",
+                "link":"https://www.facebook.com/ac.torrejon"
+            },
+            {
+                "name":"linkedin",
+                "link":"https://www.linkedin.com/in/boris-torrejon-190b13146/"
+            }
+        ],
+        "studies":[
+            {
+                "title":"Analisis de Datos",
+                "college":"CODER HOUSE",
+                "detail":"",
+                "init":"02-2021",
+                "end":"06-2021"
+            },
+            {
+                "title":"Ingenieria en Sistemas Informáticos",
+                "college":"Atlantida Argentina",
+                "detail":"",
+                "init":"03-2012",
+                "end":"12-2015"
+            }
+        ],
+        "jobs":[
+            {
+                "Company":"Servicio Penitenciario Bonaerense",
+                "title":"Data entry",
+                "detail":"Realizaba la carga de datos de internos",
+                "init":"09-2015",
+                "end":"12-2018"
+            }
+        ],
+        "skills":[
+            {
+                "skill":"PHP",
+                "level":"80"
+            }
+        ],
+        "portfolio":[
+            {
+                "title":"Mi primer Cv Web",
+                "link":"https://micv-f42ec.web.app/",
+                "detail":"Uno de mis más grandes restos fue crearlo, no queria usar un framework, lo hice a código puro."
+            }
+        ],
+        "comment":[
+            {
+                "name":"Pepe",
+                "title":"Muy interesante",
+                "message":"Sigue adelante se nota que vas por buen camino"
+            }
+        ]
+    }
+]
