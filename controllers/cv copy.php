@@ -17,9 +17,22 @@ class Cv
     private $commet;
     const dirCvsData ="./models/cvs.json";
 
-    function __construct()
+    function __construct($cv)
     {
-        
+        $this->id           = $cv['id'];
+        $this->language     = $cv['language'];
+        $this->name         = $cv['name'];
+        $this->surname      = $cv['surname'];
+        $this->email        = $cv['email'];
+        $this->phone        = $cv['phone'];
+        $this->address      = $cv['address'];
+        $this->letter       = $cv['letter'];
+        $this->socialMedia  = $cv['socialMedia'];
+        $this->studies      = $cv['studies'];
+        $this->jobs         = $cv['jobs'];
+        $this->skills       = $cv['skills'];
+        $this->portfolio    = $cv['portfolio'];
+        $this->commet       = $cv['commet'];
     }
     function render()
     {
@@ -43,7 +56,6 @@ class Cv
     }
     function post()
     {
-        $cv = json_decode(file_get_contents('php://input'));
         $cvsData = file_get_contents(Cv::dirCvsData);
         $cvsData = json_decode($cvsData,true);
         asort($cvsData);
